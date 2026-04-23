@@ -22,31 +22,11 @@ Use console.log() to clearly show the before-and-after type conversions.
 let result = "5" - 2;
 console.log(" ");
 console.log("The result is: " + result);
-console.log("Data Type of result: " + typeof(result));
 result = "5" + 2; // I changed the - to a + which reverses the data type conversion. Initially, the - converted the string "5" into a number and then subrated 3. By changing to + the number 2 is converted into a string and concatenated onto string "5".
-console.log(" ");
-console.log("The result is now: " + result)
-console.log("Data Type of result: " + typeof(result));
+console.log("The result is now: " + result);
 
 console.log(" ");
-let isValid = "false"; //Even though the string is the word "false" Boolean() will change it to true since strings are truthy.
-console.log("The Data Type of isValid is: " + typeof(isValid));
-isValid = Boolean(isValid);
-console.log("The Data Type of isValid is now: " + typeof(isValid));
-if(isValid)
-{
-  console.log("This is valid!");
-}
-else 
-{
-  console.log("This is false!");
-}
-
-console.log(" ");
-isValid = NaN; // Only six values can be changed to false using Boolean(). Strings are not one of them unless empty. I changed "false" to NaN, one of the 6 falsy values.
-console.log("The Data Type of isValid is: " + isValid);
-isValid = Boolean(isValid);
-console.log("The Data Type of isValid is now: " + typeof(isValid));
+let isValid = Boolean(NaN); // Only six values can be changed to false using Boolean(). Strings are not one of them unless empty. I changed "false" to NaN, one of the 6 falsy values.
 if (isValid) {
     console.log("This is valid!");
     
@@ -57,10 +37,8 @@ else {
 
 console.log(" ");
 let age = "25";
-console.log("The Data Type of age is: " + typeof(age));
 let totalAge = Number(age) + 5; //By converting "25" to a number, 25 and 5 add correctly instead of the 5 being concatenated onto the end of the string "25"
 console.log("Total Age: " + totalAge);
-console.log("The Data Type of totalAge is: " + typeof(totalAge));
 
 
 //My Examples
